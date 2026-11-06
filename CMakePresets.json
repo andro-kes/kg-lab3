@@ -1,0 +1,25 @@
+{
+  "version": 3,
+  "configurePresets": [
+    {
+      "name": "local",
+      "displayName": "Local LLVM-MinGW / Ninja",
+      "generator": "Ninja",
+      "binaryDir": "${sourceDir}/build",
+      "cacheVariables": {
+        "CMAKE_BUILD_TYPE": "Debug",
+        "CMAKE_EXPORT_COMPILE_COMMANDS": "ON",
+        "CMAKE_C_COMPILER": "$env{LAB_TOOLS_ROOT}/llvm-mingw-20260922-ucrt-x86_64/bin/clang.exe",
+        "CMAKE_CXX_COMPILER": "$env{LAB_TOOLS_ROOT}/llvm-mingw-20260922-ucrt-x86_64/bin/clang++.exe",
+        "CMAKE_MAKE_PROGRAM": "$env{LAB_TOOLS_ROOT}/ninja/ninja.exe"
+      }
+    }
+  ],
+  "buildPresets": [
+    {
+      "name": "local",
+      "configurePreset": "local",
+      "jobs": 2
+    }
+  ]
+}

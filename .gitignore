@@ -1,0 +1,12 @@
+/.tools/
+/.downloads/
+/build/
+/build-*/
+/out/
+/shaders/*.spv
+imgui.ini
+imgui_log.txt
+*.log
+.vs/
+.idea/
+.vscode/
